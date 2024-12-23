@@ -1,20 +1,15 @@
+import time
+import random
 from datetime import datetime
-#odds = list(range(1, 59, 2))
-#time_now = datetime.today()
-#for every_minute in time_now:
-#    every_minute = datetime.today().minute
-#    if every_minute in odds:
-#        print("This minute seem a little odd.")
-#    else:
-#        print("Not an odd minute.")
 
-
-
+m = random.randint(1, 60)
 odds = list(range(1, 59, 2))
 
-rigth_time_now = datetime.today().minute
-
-if rigth_time_now in odds:
-        print("This minute seem a little odd.")
-else:
-        print("Not an odd minute.")
+for right_this_minute in range(m):
+        rigth_this_minute = datetime.today().minute
+        if rigth_this_minute in odds:
+                print("This minute seem a little odd.")
+                time.sleep(60)
+        else:
+                print("Not an odd minute.")
+                time.sleep(60)
