@@ -1,16 +1,32 @@
 import random
+from operator import length_hint
 
-n = random.randint(0, 100) 
+n = random.randint(0, 10) 
 stairs = list(range(0, n))
-l = len(stairs)
 step = "I"
-stop= "    "
-for steps in range(l):
-    if l == n:
+stops = list()
+stop = "   "
+for stairs in range(n):
+    
+    print(step)
+    print(stop, end="")
+    print(step)
+    l = length_hint(stairs)
+    n >= l
+    for stops in range(l) :
+        print(stop *l-1)
+        steps =list(str())
+        stops.insert(steps.remove(steps.index(l)))
+        print(stop, end="")
         print(step)
-        stairs.pop()
-    else:
-        for steps in stair:
+        
+        
+   # elif:
+        #for stops in range(l) :
+            #stop = 
+            #print(step)
+                  
+   
             
 
     
