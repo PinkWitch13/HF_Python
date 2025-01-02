@@ -27,3 +27,9 @@ nums
 nums.extend([3, 4])
 nums.extend([])
 print(nums)
+
+nums.insert(0, 1)
+print(nums)
+
+nums.insert(2, "two-and-half")
+nums
