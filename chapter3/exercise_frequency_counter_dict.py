@@ -10,5 +10,6 @@ found['e'] = found['e'] + 1
 found['e'] += 1
 print(found)
 
-for k in found:
-    print(k, 'was found', found[k], 'time(s).')
+for k, v in sorted(found.items()):
+    print(k, 'was found', v, 'time(s).')
+
