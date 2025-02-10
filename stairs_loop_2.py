@@ -1,11 +1,11 @@
-import random
+n =5
+for stairs in range(0, n):
+    print("I\n")
 
-n= random.randint(0, 20)
+
+n= 5
 stairs = list(range(0, n))
-
-for s in stairs:
-    width = "\t" * s
-    tall = "\n" * s
-    step = "I"
-    
-    
+step = "I"
+steps = []
+for each_step in stairs:
+    steps.append(each_step)

@@ -1,0 +1,1 @@
+- in future add user menu, including: user selection, start, settings and quit.
