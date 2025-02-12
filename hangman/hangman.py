@@ -1,44 +1,54 @@
 import sys
 
+word = " "
+
 def hangman_logic(word):
     print("Welcome to hangman!")
-
     while True:
+        hidden_word = list(("_ ") * (len(word)).casefold())
+        print(f"The hidden word is: {hidden_word}")
         print("Find letter: ")
 
         user_input = take_input_from_user()
 
-        hangman_turn(word, user_input)
+        hangman_turn(word, user_input, hidden_word)
 
 def take_input_from_user() -> str:
-    user_letter = input("Find letter: ")
-    user_letter.casefold()
+    user_letter = input("Please provide a letter to find: ").casefold()
     return user_letter
 
-def hangman_turn(word, user_letter):
+def hangman_turn(word, user_letter, hidden_word):
     counter = 0
-    passed_l = []
-    passed_l.append(user_letter)
-    for l in passed_l:
+    letter_index = []
+    for i, user_letter in enumerate(word):
+        letter_index.append(i)
         counter+=1
-        letter_index = word.find(user_letter)
-        print(f"{letter_index=}")
-        if letter_index != None:
-            print("Match")
-            return hidden_word_switcher(user_letter, letter_index,word)
-        if letter_index == None:
-            return "No matches!"
+        if user_letter not in word:
+         print(f"No hits found for {user_letter} in round {counter}. The hidden word is: {hidden_word}")
+        else:
+            return hidden_word_switcher(user_letter, letter_index, hidden_word, word)
+                 
 
-        
+def hidden_word_switcher(user_letter, hidden_word, word)-> str:
+    while hidden_word != word:
+        print(f"1. {hidden_word=}")
+        # for i, user_letter in enumerate(word):
+        # TO-DO find i dynamically based on word and user_letter
+        # TO-DO create list based on word
+        # TO-DO create list based on hidden_word
+        # TO-DO rep;lace char on index i in word with _
+        # TO-DO replace char on index i in hidden word with user_letter
 
-def hidden_word_switcher(user_letter, letter_index, word)-> str:
-    hidden_word = list(("_") * len(word))
-    hidden_word.pop(letter_index)
-    hidden_word.insert(letter_index, user_letter)
-    hidden_word = "".join(hidden_word)
-    hidden_word = hidden_word.casefold()
-    print(f"the hidden word is: {hidden_word}")
-    return hidden_word
+        print(f"2. {hidden_word=}")
+        hidden_word.insert(i, user_letter)
+        print(f"3. {hidden_word=}")
+        hidden_word = "".join(hidden_word)
+        print(f"4. {hidden_word=}")
+        hidden_word = hidden_word.casefold()
+        print(f"the hidden word is: {hidden_word}")
+    print(f"Congratulations - the word is {hidden_word}. VICTORY!!!")
+    # TO-DO create string from hidden_word and return it
+    
 
 # def ____hangman_logic(word, letter):
 #     word_to_find, word = list(word), str(word)
