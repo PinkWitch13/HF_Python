@@ -1,6 +1,6 @@
-from hangman import hangman_logic
+# from hangman import hangman_logic
 from hangman import hidden_word_switcher
-from hangman import hangman_turn
+# from hangman import hangman_turn
 
 def _test_hangman_turn_1_match_lower():
     word = "kuba"
@@ -22,7 +22,7 @@ def _test_hangmen_turn_no_match():
 
 def test_hidden_word_switcher_one_index():
     word = "hangman"
-    hidden_word = "_______"
+    hidden_word = ['_', '_', '_', '_', '_', '_']
     user_letter = "g"
     assert hidden_word_switcher(user_letter, word, hidden_word) == "___g___"
 

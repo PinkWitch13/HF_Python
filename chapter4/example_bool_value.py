@@ -1,0 +1,15 @@
+print(bool(0))
+print(bool(0.0))
+print(bool(''))
+print(bool([]))
+print(bool({}))
+print(bool(None))
+
+#True objects:
+print(bool(1))
+print(bool(-1))
+print(bool(42))
+print(bool(0.00000000000000000000000000001))
+print(bool('Panic'))
+print(bool([43, 43, 44]))
+print(bool({'a':42, 'b':42}))
