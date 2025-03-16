@@ -1,0 +1,7 @@
+README.txt
+search4letters.py
+setup.py
+search4letters.egg-info/PKG-INFO
+search4letters.egg-info/SOURCES.txt
+search4letters.egg-info/dependency_links.txt
+search4letters.egg-info/top_level.txt

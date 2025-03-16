@@ -1,19 +1,18 @@
 import sys
 
 word = " "
-
+passed_letters = []
 
 def hangman_logic(word):
     print("Welcome to hangman!")
-    while True:
-        hidden_word = list(("_ ") * (len(word)).casefold())
+    while word == True:
+        hidden_word = ("_ ") * (len(word)).casefold()
+        hidden_word = list(hidden_word)
         print(f"The hidden word is: {hidden_word}")
         print("Find letter: ")
-
         user_input = take_input_from_user()
 
         hangman_turn(word, user_input, hidden_word)
-
 
 def take_input_from_user() -> str:
     """Function conwerting user input string."""
@@ -23,9 +22,10 @@ def take_input_from_user() -> str:
 def hangman_turn(word, user_letter, hidden_word):
     """Function describing succesively each round of the game."""
     counter = 0
-    letter_index = []
+    global passed_letters
+    passed_letters.append(user_letter)
     for i, user_letter in enumerate(word):
-        letter_index.append(i)
+        letter_index.ap(i)
         counter +=1
         if user_letter not in word:
             print(f"No hits found for {user_letter} in round {counter}")
@@ -37,21 +37,21 @@ def hangman_turn(word, user_letter, hidden_word):
                                         word)
                  
 def hidden_word_switcher(user_letter, hidden_word, 
-                             word)-> str:
-    """Function describing how variable 'hidden_word' 
-       act after each match."""
-    sor_word = sorted(word)
-    sor_hidden_word = sorted(hidden_word)
-    while sor_hidden_word != sor_word:
-        print(f"1. {hidden_word=}")
-        for i, user_letter in enumerate(word):
-            list(hidden_word)
-            del hidden_word[-i]
-            hidden_word.insert(i, user_letter)
-            "".join(hidden_word)
-            print(f"the hidden word is: {hidden_word}")
-    if sor_hidden_word == sor_word:       
-        print(f"Congratulations - the word is {hidden_word}. VICTORY!!!")
+                             word) -> str:
+    """Function reveal user_letter in hidden_word 
+       after each match."""
+    
+    index = []
+    for i, user_letter in enumerate(word):
+        hidden_word = list(hidden_word)
+        index.append(i)
+        del hidden_word[i]
+        hidden_word.insert(i, user_letter)
+        str("".join(hidden_word))
+        print(f"the hidden word is: {hidden_word=}")
+
+ 
+        
     
 
             

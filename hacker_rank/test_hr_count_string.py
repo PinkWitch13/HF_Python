@@ -1,25 +1,16 @@
-from hr_count_string import substring_counter
+from hr_count_string import count_substring
 
-sentence = "Kuba jest fajny"
-word = "Kuba"
+def test_count_substring_include_words():
+    main_str = 'Kuba jest fajny'
+    sub_str = 'Kuba'
+    assert count_substring(main_str, sub_str) == 1
 
-sentence = "ABCDCDC"
-word = "CDC"
+def test_count_substring_words():
+    main_str = 'ABCDCDC'
+    sub_str = 'CDC'
+    assert count_substring(main_str, sub_str) == 2
 
-sentence = "A B C"
-word = "ABC"
-
-def test_substring_counter_include_words():
-    sentence = 'Kuba jest fajny'
-    word = 'Kuba'
-    assert substring_counter(word,sentence) == True
-
-def test_substring_counter_words():
-    sentence = "ABCDCDC"
-    word = "ABC"
-    assert substring_counter(word,sentence) == True
-
-def test_substring_counter_words_and_spaces():
-    sentence = "A B C"
-    word = "ABC"
-    assert substring_counter(word,sentence) == False
+def test_count_substring_words_and_spaces():
+    main_str = 'A B C'
+    sub_str = 'ABC'
+    assert count_substring(main_str, sub_str) == 0

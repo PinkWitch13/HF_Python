@@ -1,32 +1,54 @@
+""""EXERCISE: In this challenge, the user enters a string and 
+    a substring. You have to print the number of times that 
+    the substring occurs in the given string. String traversal 
+    will take place from left to right, not from right to left.  """
 
-def _substring_counter(word, sentence):
-    counter = len(sentence)
-    for word_letter in word:
-        print(f"{word_letter=}")
-        for s_letter in sentence:
-            print(f"{s_letter=}")
-            if word_letter == s_letter:
-                counter -= 1
-                print("Match",f"{counter=}")
-                if counter == (len(sentence) - len(word)):
-                    return True
-            else:
+main_str = 'CDDC' #'Kuba jest fajny' #ABCDCDC' 
+
+sub_str = 'CDC' #'Kuba' #'CDC' 
+
+# def count_substring(main_str, sub_str):
+#     counter = 0
+#     sub_str = list(sub_str)
+#     let_count = 0
+#     ch_count = 0
+#     for letter in main_str:
+#         if letter in sub_str:
+#            ch_count += 1
+#            print(f'{let_count=}')
+#            if ch_count == len(sub_str) and let_count == len(sub_str):
+#                 counter += 1
+#                 let_count = 0
+#                 ch_count = 0
+#                 continue
+#            elif ch_count < len(sub_str) and let_count < len(sub_str):
+#                 let_count += 1
+#                 continue
+#            elif ch_count > len(sub_str):
+#                 let_count = 0
+#                 continue
+#         else:
+#             ch_count -=1
+#             let_count = 0
+#             continue
+#     return counter
+
+def count_substring(main_str, sub_str):
+    let_count = 0
+    counter = 0
+    sub_str = list(sub_str)
+    for letter in main_str:
+        if letter in sub_str:
+            let_count += 1
+            if let_count == len(sub_str):
+                counter += 1
+                let_count = 0
                 continue
-    return False
+            elif let_count < len(sub_str):
+                continue
+        elif letter not in sub_str:
+            let_count = 0
+            break
+    return counter
 
-def substring_counter(word, sentence):
-    new_word = list(word)
-
-    for sen_char in sentence:
-        index = 0
-        for wor_char in new_word:
-            if wor_char == sen_char:
-                new_word.pop(index)
-                break
-            else:
-                new_word = list(word)
-            index += 1
-        if len(new_word) == 0:
-            return True 
-    return False
-
+print(f'Substring occured {count_substring(main_str, sub_str)} times')
