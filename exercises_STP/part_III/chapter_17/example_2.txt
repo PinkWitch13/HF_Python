@@ -1,0 +1,6 @@
+# if i type  python3 -c "import this"  in the directory
+  in wich i created file zen.txt "The Zen of Python"
+  poem will be printed as an output
+
+  -c  flag informs bash that im going to pass a string 
+      containing Python code as an argument

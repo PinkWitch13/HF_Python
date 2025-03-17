@@ -1,0 +1,20 @@
+in Bash!!!
+
+#  [[:digit:]]  - allows to match digits in a string
+
+        $ echo 123 hi 34 hello. | grep [[:digit:]]
+
+
+#  same can do \d in Python
+        
+        import re
+
+        line = "123?34 hello?"
+
+        m = re.findall("\d",
+                        line,
+                        re.IGNORECASE)
+
+        print(m)
+
+      >> ['1', '2', '3', '3', '4']  

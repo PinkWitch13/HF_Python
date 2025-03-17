@@ -1,0 +1,16 @@
+for Bash!!!
+
+ls --author
+
+# lists all the files in current directory with a name of 
+  the author who created them
+
+ls -al
+
+# list all files including hidden ones (hidden files starts with .
+                                         example:
+                                         .hidden)
+
+touch .self_taught
+
+# crate a hidden file (without . for normal file)  

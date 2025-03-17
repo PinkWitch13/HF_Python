@@ -1,0 +1,5 @@
+in Bash!!!
+
+echo Two too. | grep -i t[wo]o
+
+ output: > Two too

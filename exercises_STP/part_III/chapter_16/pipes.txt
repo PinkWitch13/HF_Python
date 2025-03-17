@@ -1,0 +1,9 @@
+
+pipe - operand |, asses output of one command as 
+       an input to another
+
+ls | less
+
+# command allows to browse content of txt files in a text editor (q to quit), 
+  one page at a time
+

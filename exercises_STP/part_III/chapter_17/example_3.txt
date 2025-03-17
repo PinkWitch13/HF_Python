@@ -1,0 +1,17 @@
+in Bash!!!
+
+grep Beautiful zen.txt
+
+# word Beautiful is a regular expression so it will be colour red
+  command will display full line containing this expression
+
+# case of letters matters
+# to make it case insensitive:
+
+grep - i beautiful zen.txt
+
+grep - o Beautiful zen.txt
+
+-o flag allows to display only specified expression
+
+re  - build in library with regular expressions

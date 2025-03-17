@@ -1,0 +1,15 @@
+                            root
+                           /    \
+                        home    etc
+                       /          \
+                    bernie        bin
+                  /       \
+                test     projects
+
+abslute path - syntax starts with a /, root as a starting point
+
+relative path - without / at start, current working directory 
+                as a starting point.
+                example:
+
+                bernie/test if home as a working directory 

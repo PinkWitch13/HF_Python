@@ -1,0 +1,6 @@
+for Bash!!!
+
+touch filename.txt
+
+# creates a new txt file in my current directory
+

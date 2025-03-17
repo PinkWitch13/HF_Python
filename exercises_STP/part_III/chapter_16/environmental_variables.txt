@@ -1,0 +1,9 @@
+export x = 100
+
+# crates a environmental variable x and assigns its value to 100
+  this variable lives only in the terminal window it was created
+
+echo $x
+
+# to reference to environmental variable put a $ in front of its name
+  

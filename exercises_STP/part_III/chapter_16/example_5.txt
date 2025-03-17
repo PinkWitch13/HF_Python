@@ -1,0 +1,33 @@
+for Bash!!!
+
+cd /
+
+# navigate to your root directory by command 
+  change directory
+
+pwd
+
+ls
+
+# list all files in your current working directory
+
+mkdir example_for_example
+
+# make a directory
+
+cd ~
+mkdir tstp
+cd tstp
+
+cd ..
+
+# SHORTCUT: use this command to navigate one level up on the tree
+
+rmdir tstp
+
+# removes directory
+
+ls
+
+
+

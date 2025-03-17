@@ -1,0 +1,20 @@
+in Bash!!!
+
+#  *  - adds repetition to regular expresion
+        in this case it makes the program find 
+        in string letters tw followed by multi o letters.
+
+    $ echo two twoo not too. | grep - o two*
+
+
+#  .  - in regular expression this symbol matches any character
+
+    $ echo __hello__there | grep -o __.*__
+
+
+#  *  is greedy, will try to match as much text as it 
+        can.
+
+    $ echo __hi__bye__hi__there | grep -o __.*__
+
+    >__hi__bye__hi__

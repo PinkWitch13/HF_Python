@@ -1,0 +1,19 @@
+in Bash!!!
+
+# to escape a character (ignore a 
+  character's meaning and match it instead) 
+  in regular expresssion prefix a character with a backslash (\)
+
+    $ echo I love $ | grep \\$
+
+in Python!!!
+
+import re
+
+line = "I love $"
+
+m = re.findall("\\$",
+                line,
+                re.IGNORECASE)
+
+print(m)

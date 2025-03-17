@@ -1,0 +1,16 @@
+in Bash!!!
+
+#  ^  - caret character can be used to create a regular expresion 
+        that only matxhes the pattern if the pattern occures at 
+        tha begining of a line:
+
+    $ grep ^If zen.txt
+
+
+#  $  - can be used to only match the lines that end with a 
+        pattern
+
+    $ grep idea.$ zen.txt
+
+
+    

@@ -1,0 +1,9 @@
+for Bash!!!
+
+python3
+
+#now I can execute code:
+
+print('Hello, World!')
+
+exit()
