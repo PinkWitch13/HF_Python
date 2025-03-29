@@ -1,0 +1,39 @@
+1. Creating a directory for my project:
+    (!!!allweys be sure you are in the right directory, 
+    before proceed!!!)
+    
+    $ mkdir [my_project]
+
+2. Setting up virtual environment for the project:
+    (change directory to [my_project] if needed)
+
+    $ python3 -m venv venv
+        (I ask python to run venv package which create 
+         a virtual environment called venv)
+
+    $ virtualenv venv
+    $ . venv/bin/activate 
+        (to activate virtual environment)
+
+    $ deactivate
+        (to deactivate virtual environment)
+
+3. Create application:
+    
+    - change directory to [my_project]
+    - in [my_project] create directory  app
+    - in [app] create python file named  __init__
+
+    $ touch [app]/__init__.py
+
+        -  in [__init__] import Flask module
+        - create variable [app] to which 
+          assign Flask object as general variable __name__
+        - to prevent circular imports in last line, 
+          import routes (which don't exist yet) from
+          [app]
+
+        -
+    
+        
+   

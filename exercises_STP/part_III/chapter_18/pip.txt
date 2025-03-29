@@ -1,0 +1,23 @@
+in Bash!!!
+
+#  pip  - package menager, to open i bash:
+
+    $ pip3
+
+# example of how to use pip to install specified version of package
+  Flask  - Python package for creating websites on Ubuntu and Unix.
+
+    $ sudo pip3 install Flask==3.1.0
+
+# !!! on P it wont work ad i have to use  apt  instead
+
+    $ sudo apt update
+    $ sudo apt install python3-flask
+
+#  freeze  - to view packages I've installed.
+
+    $ pip3 freeze
+    
+# to uninstall package:
+
+    $ pip3 uninstall flask

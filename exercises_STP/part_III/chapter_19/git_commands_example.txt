@@ -1,0 +1,64 @@
+# to download a local repository to my computer:
+
+    $ git clone [repository_url]
+#  status  - shows the current state of project in 
+             relation to repo.
+           - prints the files in local repo that 
+             differ from those in central repo.
+           - when staged file - green
+           - when unstaged file - red
+    
+    $ git status
+
+#  add  - to stage a file
+
+    $ git add [file_name]
+
+#  reset  - to unstage a file
+
+    $ git reset [path_to_the_file_to_unstage]
+
+#  commit  - creates a  commit - a version of project 
+             that Git saves. (it is a recording of 
+             changes made in local repo)
+           -m  flag for add a message (like comment, 
+               it explains the changes made) 
+    
+    $ git commit -m "message message message"
+
+#  pushing  - updating central repo with changes 
+              from local repo.
+    
+    $ git push
+
+#  pulling  - updating local repo with changes 
+              from central repo.
+
+    $ git pull
+
+#  remote  - prints the URL of the central repo 
+             local repo is pushing to and pulling 
+             from.
+           -v  flag usually prints extra info and 
+               stands for verbose.
+
+    $ git remote -v
+
+# first line of output - the repo i will pull from;
+  second line - the repo i will push to.
+
+#  log  - shows history of commits
+
+    $ git log
+
+#  diff  - shows the difference between a file in local 
+           repo and in central repo.
+
+    $ git diff [file_name]
+
+# in output things new to the code will be highlighted 
+  green an preceded by (+) operator.
+  things that where deleted will be highlighted red and 
+  preceded by (-) operator. 
+
+

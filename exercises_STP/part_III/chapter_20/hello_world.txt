@@ -1,0 +1,2 @@
+<tag_name> - opening tag
+</tag_name> - closing tag 
