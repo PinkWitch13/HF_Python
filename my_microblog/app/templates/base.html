@@ -9,9 +9,9 @@
     <body>
         <div>
             My Microblog:
-            <a href="{{ url_for('index')}}">Home</a>
+            <a href="{{ url_for('index') }}">Home</a>
             {% if current_user.is_anonimus %}
-            <a href="{{ url_for('login')}}">Login</a>
+            <a href="{{ url_for('login') }}">Login</a>
             {% else %}
             <a href="{{ url_for('logout') }}"
             {% endif %}
