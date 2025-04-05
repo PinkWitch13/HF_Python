@@ -1,25 +1,23 @@
 from flask import render_template, flash, redirect, request, url_for
 from urllib.parse import urlparse
 from flask_login import current_user, login_user, logout_user, login_required
+from datetime import datetime
 from app import app, db
 from app.forms import LoginForm, RegistrationForm
 from app.models import User
+
+@app.before_request
+def before_request():
+    if current_user.is_authenticated:
+        current_user.last_seen = datetime.utcnow()
+        db.session.commit()
 
 @app.route('/')
 @app.route('/index')
 @login_required
 def index():
     user = {'username':'Joanna'}
-    posts = [
-        {    
-            'author' : {'username' : 'John'},
-            'body' : 'Beautiful day in Portland!'
-        },
-        {    
-            'author' : {'username' : 'Susan' },
-            'body' : 'The Avengers movie was so cool!'
-        }
-    ]
+    posts = []
     return render_template('index.html', title='Home Page', posts=posts)
 
 @app.route('/login', methods=['GET', 'POST'])
