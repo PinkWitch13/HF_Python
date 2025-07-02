@@ -3,17 +3,25 @@
 
 
 class Dictionary():
-    self = {}
 
     def __init__(self):
-        self.word = word
-        self.definition = definition
-
-        
+        self.dict = {}
+          
     def newentry(self, word, definition):
-        return self[word : definition]
+        self.key = self.word = word
+        self.value = self.definition = definition
+        if word not in self.dict:
+            self.dict = {word : definition}
+            return self.dict
+        else:
+            return "Word and definition allredy in"
         
-    # def look(self, key):
+    def look(self, key):
+        defi = self.dict.get(key)
+        if defi in self.dict:
+            print(defi)
+        else:
+            print("Can't find such value")
         
         
     #     pass
